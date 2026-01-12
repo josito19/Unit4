@@ -7,8 +7,7 @@ public class Principal {
 	public static void main(String[] args) {
 		// Creacion del escaner
 		Scanner sc = new Scanner(System.in);
-		boolean esMayor;
-		
+
 		// Creamos dos Persona
 		Persona p1 = new Persona();
 		Persona p2 = new Persona();
@@ -32,11 +31,14 @@ public class Principal {
 		p2.edad = sc.nextInt();
 		System.out.println("DNI:");
 		p2.dni = sc.next();
-		
+
 		// Mostramos los datos de Persona
-		esMayor = p1.edad >= 18 ? true : false;
-		System.out.println(p1.nombre + " " + p1.apellidos + " con dni " + p1.dni + " es mayor de edad");
-				
+		System.out.println(p1.edad >= 18 ? p1.nombre + " " + p1.apellidos + " con dni " + p1.dni + " es mayor de edad"
+				: p1.nombre + " " + p1.apellidos + " con dni " + p1.dni + " no es mayor de edad");
+
+		System.out.println(p2.edad >= 18 ? p2.nombre + " " + p2.apellidos + " con dni " + p2.dni + " es mayor de edad"
+				: p2.nombre + " " + p2.apellidos + " con dni " + p2.dni + " no es mayor de edad");
+
 		sc.close();
 	}
 
